@@ -1,5 +1,6 @@
 {
   "name": "Volvo Visual Stats",
+  "category": "lovelace",
   "homeassistant": "2024.1.0",
   "documentation": "https://github.com/nmatei/ha_volvo_visual_stats",
   "issues": "https://github.com/nmatei/ha_volvo_visual_stats/issues",
