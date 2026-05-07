@@ -1,21 +1,21 @@
 import { svg } from 'lit';
 
-// Interior cabin area (approximate)
+// Interior cabin area — matches the dark rect in SVG (x:25-175, y:120-232)
 const CABIN_AREA = {
-  x: 50,
-  y: 80,
-  width: 100,
-  height: 120,
+  x: 37,
+  y: 130,
+  width: 126,
+  height: 100,
 };
 
-// Steam particle positions (will animate)
+// Steam particle positions within the cabin
 const STEAM_PARTICLES = [
-  { cx: 80, cy: 120, r: 12, delay: 0 },
-  { cx: 100, cy: 140, r: 10, delay: 0.3 },
-  { cx: 120, cy: 110, r: 14, delay: 0.6 },
-  { cx: 90, cy: 160, r: 11, delay: 0.9 },
-  { cx: 110, cy: 150, r: 13, delay: 1.2 },
-  { cx: 75, cy: 180, r: 12, delay: 1.5 },
+  { cx: 65,  cy: 155, r: 10, delay: 0   },
+  { cx: 100, cy: 170, r: 9,  delay: 0.3 },
+  { cx: 135, cy: 150, r: 11, delay: 0.6 },
+  { cx: 80,  cy: 200, r: 10, delay: 0.9 },
+  { cx: 120, cy: 210, r: 9,  delay: 1.2 },
+  { cx: 100, cy: 195, r: 12, delay: 1.5 },
 ];
 
 export const createClimateEffect = () => {

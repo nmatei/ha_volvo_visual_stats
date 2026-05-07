@@ -1,26 +1,27 @@
 import { svg } from 'lit';
 import { CarState } from '../types';
 
-// Window positions (x, y, width, height) - adjusted to match car image
+// Window positions — side glass strips as seen from top-down view
+// Left side: x=25..37, Right side: x=163..175
 const WINDOW_POSITIONS = {
-  front_left: { x: 30, y: 40, width: 45, height: 40 },
-  front_right: { x: 125, y: 40, width: 45, height: 40 },
-  back_left: { x: 25, y: 130, width: 50, height: 45 },
-  back_right: { x: 125, y: 130, width: 50, height: 45 },
+  front_left:  { x: 25, y: 120, width: 12, height: 72 },
+  front_right: { x: 163, y: 120, width: 12, height: 72 },
+  back_left:   { x: 25, y: 192, width: 12, height: 40 },
+  back_right:  { x: 163, y: 192, width: 12, height: 40 },
 };
 
-// Door positions (simplified as rectangles on the sides)
+// Door positions (full door panel highlight)
 const DOOR_POSITIONS = {
-  front_left: { x: 10, y: 70, width: 20, height: 50 },
-  front_right: { x: 170, y: 70, width: 20, height: 50 },
-  back_left: { x: 5, y: 140, width: 20, height: 60 },
-  back_right: { x: 175, y: 140, width: 20, height: 60 },
+  front_left:  { x: 14, y: 92,  width: 28, height: 102 },
+  front_right: { x: 158, y: 92,  width: 28, height: 102 },
+  back_left:   { x: 14, y: 192, width: 28, height: 42 },
+  back_right:  { x: 158, y: 192, width: 28, height: 42 },
 };
 
 // Special doors
 const SPECIAL_DOOR_POSITIONS = {
-  trunk: { x: 85, y: 270, width: 30, height: 20 },
-  frunk: { x: 85, y: 10, width: 30, height: 15 },
+  trunk: { x: 38, y: 252, width: 124, height: 30 },
+  frunk: { x: 38, y: 12,  width: 124, height: 80 },
 };
 
 const ORANGE_LINE_COLOR = '#ff9800';

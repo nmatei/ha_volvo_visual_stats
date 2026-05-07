@@ -13,8 +13,18 @@ const VOLVO_CAR_IMAGE_BASE64 = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAA
 
 @customElement('volvo-visual-stats')
 export class VolvoStatsCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
-  
+  private _hass?: HomeAssistant;
+
+  set hass(hass: HomeAssistant) {
+    this._hass = hass;
+    this.updateCarState();
+    this.requestUpdate();
+  }
+
+  get hass(): HomeAssistant {
+    return this._hass!;
+  }
+
   @property({ type: Object })
   public config!: VolvoStatsCardConfig;
 
@@ -54,13 +64,6 @@ export class VolvoStatsCard extends LitElement {
     this.config = config;
   }
 
-  protected firstUpdated(): void {
-    this.updateCarState();
-  }
-
-  protected updated(): void {
-    this.updateCarState();
-  }
 
   private getEntityId(section: 'windows_doors' | 'climate' | 'charging' | 'tire_pressure', key: string): string | undefined {
     const idPrefix = this.config.id_prefix || 'volvo_';
@@ -85,7 +88,7 @@ export class VolvoStatsCard extends LitElement {
   }
 
   private updateCarState(): void {
-    if (!this.hass) return;
+    if (!this._hass) return;
 
     const newState: CarState = {
       windows_doors: {
@@ -104,8 +107,8 @@ export class VolvoStatsCard extends LitElement {
         active: this.getEntityState(this.getEntityId('climate', 'active')),
       },
       charging: {
-        status: this.hass.states[this.getEntityId('charging', 'status') || '']?.state || 'idle',
-        isCharging: this.getEntityState(this.getEntityId('charging', 'status')),
+        status: this._hass.states[this.getEntityId('charging', 'status') || '']?.state || 'idle',
+        isCharging: (this._hass.states[this.getEntityId('charging', 'status') || '']?.state) === 'charging',
       },
       tire_pressure: {
         front_left_warning: this.getEntityState(this.getEntityId('tire_pressure', 'front_left_warning')),
@@ -119,10 +122,10 @@ export class VolvoStatsCard extends LitElement {
   }
 
   private getEntityState(entityId: string | undefined): boolean {
-    if (!entityId || !this.hass.states[entityId]) {
+    if (!entityId || !this._hass?.states[entityId]) {
       return false;
     }
-    const state = this.hass.states[entityId].state;
+    const state = this._hass.states[entityId].state;
     return state === 'on' || state === 'true' || state === 'open';
   }
 

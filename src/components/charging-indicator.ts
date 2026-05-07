@@ -1,11 +1,11 @@
 import { svg } from 'lit';
 
-// Charging port location (typically on side of vehicle)
+// Charging port — Volvo XC40 has it on the left front fender (driver side)
 const CHARGING_PORT = {
-  cx: 185,  // Right side of car
-  cy: 180,
-  outerRadius: 16,
-  innerRadius: 10,
+  cx: 17,   // Left side of car, between front wheel and mirror
+  cy: 105,
+  outerRadius: 10,
+  innerRadius: 6,
 };
 
 export const createChargingIndicator = () => {

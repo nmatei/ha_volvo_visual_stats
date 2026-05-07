@@ -1,12 +1,12 @@
 import { svg } from 'lit';
 import { CarState } from '../types';
 
-// Wheel positions (approximate corners of the car)
+// Wheel positions — matching the SVG wheel circles
 const WHEEL_POSITIONS = {
-  front_left: { cx: 35, cy: 60 },
-  front_right: { cx: 165, cy: 60 },
-  back_left: { cx: 35, cy: 240 },
-  back_right: { cx: 165, cy: 240 },
+  front_left:  { cx: 18,  cy: 88  },
+  front_right: { cx: 182, cy: 88  },
+  back_left:   { cx: 18,  cy: 218 },
+  back_right:  { cx: 182, cy: 218 },
 };
 
 const PRESSURE_INDICATOR_RADIUS = 8;
