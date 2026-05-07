@@ -8,6 +8,7 @@ on:
       - 'package.json'
       - 'tsconfig.json'
       - 'rollup.config.js'
+      - 'hacs.json'
       - '.github/workflows/build.yml'
 
 jobs:
