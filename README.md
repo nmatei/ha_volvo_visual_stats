@@ -2,7 +2,7 @@
 
 A Home Assistant custom card that displays your Volvo vehicle status with beautiful real-time visual indicators.
 
-![Volvo Visual Stats Card](https://raw.githubusercontent.com/nmatei/ha_volvo_visual_stats/main/images/default.PNG)
+![Volvo Visual Stats Card](https://raw.githubusercontent.com/nmatei/ha_volvo_visual_stats/master/images/default.PNG)
 
 ## Features
 
