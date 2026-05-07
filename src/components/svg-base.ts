@@ -10,8 +10,8 @@ import { createTirePressureIndicators } from './tire-pressure';
 const SVG_WIDTH = 200;
 const SVG_HEIGHT = 300;
 
-// SVG car illustration (top-down view, simple but realistic Volvo)
-const CAR_SVG = `
+// SVG car illustration as a Lit svg template (not a plain string — Lit would escape it)
+const CAR_SVG = svg`
   <!-- Car body (realistic shape) -->
   <g class="car-body">
     <!-- Main chassis -->
