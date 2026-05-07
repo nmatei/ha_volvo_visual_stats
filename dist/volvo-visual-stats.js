@@ -619,14 +619,14 @@ __decorate([n({
 })], VolvoStatsCard.prototype, "config", void 0);
 __decorate([r()], VolvoStatsCard.prototype, "_carState", void 0);
 VolvoStatsCard = __decorate([t('volvo-visual-stats')], VolvoStatsCard);
-// Register custom card with Home Assistant
-const registerCustomCard = () => {
-  const customElements = window.customElements;
-  if (!customElements.get('volvo-visual-stats')) {
-    customElements.define('volvo-visual-stats', VolvoStatsCard);
-  }
-};
-registerCustomCard();
+// Register card with Home Assistant UI picker
+window.customCards = window.customCards || [];
+window.customCards.push({
+  type: 'volvo-visual-stats',
+  name: 'Volvo Visual Stats',
+  description: 'Displays Volvo vehicle status with real-time visual indicators',
+  preview: false
+});
 
 export { VolvoStatsCard };
 //# sourceMappingURL=volvo-visual-stats.js.map

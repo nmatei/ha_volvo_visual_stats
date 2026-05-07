@@ -176,12 +176,11 @@ export class VolvoStatsCard extends LitElement {
   }
 }
 
-// Register custom card with Home Assistant
-const registerCustomCard = () => {
-  const customElements = window.customElements;
-  if (!customElements.get('volvo-visual-stats')) {
-    customElements.define('volvo-visual-stats', VolvoStatsCard);
-  }
-};
-
-registerCustomCard();
+// Register card with Home Assistant UI picker
+(window as any).customCards = (window as any).customCards || [];
+(window as any).customCards.push({
+  type: 'volvo-visual-stats',
+  name: 'Volvo Visual Stats',
+  description: 'Displays Volvo vehicle status with real-time visual indicators',
+  preview: false,
+});
