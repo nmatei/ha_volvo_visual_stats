@@ -23,7 +23,7 @@ A Home Assistant custom card that displays your Volvo vehicle status with beauti
 2. Click the **three dots** (⋯) in the top-right corner
 3. Select **"Custom repositories"**
 4. Paste the repository URL: `https://github.com/nmatei/ha_volvo_visual_stats`
-5. Select **Category:** `Lovelace`
+3. Select **Category:** `Dashboard`
 6. Click **"Create"**
 7. The repository will appear in HACS
 8. Click on **"Volvo Visual Stats"** → Click **"Download"**
