@@ -1,21 +1,21 @@
 import { svg } from 'lit';
 
-// Interior cabin area — matches the dark rect in SVG (x:25-175, y:120-232)
+// Interior cabin area — interior section of the car (approximate for 300x612 viewBox)
 const CABIN_AREA = {
-  x: 37,
-  y: 130,
-  width: 126,
-  height: 100,
+  x: 50,
+  y: 180,
+  width: 200,
+  height: 250,
 };
 
 // Steam particle positions within the cabin
 const STEAM_PARTICLES = [
-  { cx: 65,  cy: 155, r: 10, delay: 0   },
-  { cx: 100, cy: 170, r: 9,  delay: 0.3 },
-  { cx: 135, cy: 150, r: 11, delay: 0.6 },
-  { cx: 80,  cy: 200, r: 10, delay: 0.9 },
-  { cx: 120, cy: 210, r: 9,  delay: 1.2 },
-  { cx: 100, cy: 195, r: 12, delay: 1.5 },
+  { cx: 100,  cy: 250, r: 15, delay: 0   },
+  { cx: 150, cy: 280, r: 14,  delay: 0.3 },
+  { cx: 200, cy: 240, r: 16, delay: 0.6 },
+  { cx: 120,  cy: 320, r: 15, delay: 0.9 },
+  { cx: 180, cy: 340, r: 14,  delay: 1.2 },
+  { cx: 150, cy: 310, r: 17, delay: 1.5 },
 ];
 
 export const createClimateEffect = () => {

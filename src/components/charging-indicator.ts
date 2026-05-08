@@ -1,11 +1,12 @@
 import { svg } from 'lit';
 
-// Charging port — Volvo XC40 has it on the left front fender (driver side)
+// Charging port — Volvo XC40 typically has it on the left front fender (driver side)
+// Position scaled for 300x612 viewBox
 const CHARGING_PORT = {
-  cx: 17,   // Left side of car, between front wheel and mirror
-  cy: 105,
-  outerRadius: 10,
-  innerRadius: 6,
+  cx: 25,   // Left side of car, between front wheel and mirror
+  cy: 160,
+  outerRadius: 15,
+  innerRadius: 9,
 };
 
 export const createChargingIndicator = () => {

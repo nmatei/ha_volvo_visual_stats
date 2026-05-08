@@ -1,15 +1,17 @@
 import { svg } from 'lit';
 import { CarState } from '../types';
 
-// Wheel positions — matching the SVG wheel circles
+// Wheel positions for 300x612 viewBox (top-down view of Volvo XC40)
+// Wheels are typically at corners of the car body
+// Positions estimated from the car structure in default.svg
 const WHEEL_POSITIONS = {
-  front_left:  { cx: 18,  cy: 88  },
-  front_right: { cx: 182, cy: 88  },
-  back_left:   { cx: 18,  cy: 218 },
-  back_right:  { cx: 182, cy: 218 },
+  front_left:  { cx: 35,  cy: 80  },
+  front_right: { cx: 265, cy: 80  },
+  back_left:   { cx: 35,  cy: 520 },
+  back_right:  { cx: 265, cy: 520 },
 };
 
-const PRESSURE_INDICATOR_RADIUS = 8;
+const PRESSURE_INDICATOR_RADIUS = 12;
 
 export const createTirePressureIndicators = (carState: CarState) => {
   const { tire_pressure } = carState;

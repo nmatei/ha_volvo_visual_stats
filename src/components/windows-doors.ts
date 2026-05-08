@@ -1,27 +1,28 @@
 import { svg } from 'lit';
 import { CarState } from '../types';
 
-// Window positions — side glass strips as seen from top-down view
-// Left side: x=25..37, Right side: x=163..175
+// Window positions for 300x612 viewBox (top-down view)
+// Windows are side glass strips on the left and right of the car
+// Scaled from original 200x300 coordinates to match default.svg dimensions
 const WINDOW_POSITIONS = {
   front_left:  { x: 25, y: 120, width: 12, height: 72 },
-  front_right: { x: 163, y: 120, width: 12, height: 72 },
+  front_right: { x: 263, y: 120, width: 12, height: 72 },
   back_left:   { x: 25, y: 192, width: 12, height: 40 },
-  back_right:  { x: 163, y: 192, width: 12, height: 40 },
+  back_right:  { x: 263, y: 192, width: 12, height: 40 },
 };
 
 // Door positions (full door panel highlight)
 const DOOR_POSITIONS = {
   front_left:  { x: 14, y: 92,  width: 28, height: 102 },
-  front_right: { x: 158, y: 92,  width: 28, height: 102 },
+  front_right: { x: 258, y: 92,  width: 28, height: 102 },
   back_left:   { x: 14, y: 192, width: 28, height: 42 },
-  back_right:  { x: 158, y: 192, width: 28, height: 42 },
+  back_right:  { x: 258, y: 192, width: 28, height: 42 },
 };
 
-// Special doors
+// Special doors (trunk and frunk)
 const SPECIAL_DOOR_POSITIONS = {
-  trunk: { x: 38, y: 252, width: 124, height: 30 },
-  frunk: { x: 38, y: 12,  width: 124, height: 80 },
+  trunk: { x: 38, y: 252, width: 224, height: 90 },
+  frunk: { x: 38, y: 12,  width: 224, height: 80 },
 };
 
 const ORANGE_LINE_COLOR = '#ff9800';
