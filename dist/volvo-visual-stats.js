@@ -365,7 +365,7 @@ const createPressureIndicator = pos => {
 
 // Auto-generated from default.svg
 const defaultSvgContent = `
-<path fill="#0A0A0A" opacity="1.000000" stroke="none" 
+<path fill="none" opacity="1.000000" stroke="none" 
 	d="
 M301.000000,219.000000 
 	C301.000000,350.630737 301.000000,481.761475 301.000000,612.946106 
